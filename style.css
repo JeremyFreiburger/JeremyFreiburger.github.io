@@ -1,21 +1,20 @@
-@import url("https://use.typekit.net/jmk3xov.css");
+  @import url("https://use.typekit.net/jmk3xov.css");
+  @import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Monoton&family=Roboto+Mono:wght@100&family=UnifrakturMaguntia&display=swap');
 
-canvas {
+  canvas {
   position: fixed;
   top: 0;
   left: 0;
 }
 
-
 :root {
   --dark-bg: rgba(15, 15, 15, 0.95);
   --spacing: 350px;
-
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
   font-style: normal;
+  white-space: nowrap;
 }
-
 
 main {
   width: 100vw;
@@ -25,15 +24,8 @@ main {
   width: 100%;
   margin: 0px auto;
   padding: 120px 0px;
-  
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-}
-
-h1, h2, h3, blockquote {
-  font-family: elevon, sans-serif;
-  font-weight: 700;
-  font-style: normal;
 }
 
 canvas {
@@ -43,39 +35,129 @@ canvas {
 }
 
 
-
   header {
-    background: var(--dark-bg);
     grid-column: 2 / span 5;
     font-size: 2.5rem;
     padding: 2rem;
     margin-bottom: var(--spacing);
+    padding-bottom: 175px;
   }
 
   section {
     grid-column: 2 / 8;
     padding: 1rem;
-    background: var(--dark-bg);
+    /*background: var(--dark-bg);*/
     font-size: 1.25rem;
     line-height: 1.5;
     margin-bottom: var(--spacing);
+
   }
 
-  blockquote {
-    margin: 0;
-    padding: 0;
-    grid-column: 2 / span 9;
-    margin-bottom: var(--spacing);
+  .icon {
+    text-decoration: none;
+  }
+  .icon i {
+    filter: brightness(100%); /* Set icons to their original colors (brightness 100%) */
+    color: white; /* Set the color of the icons to white */
   }
 
-  blockquote p {
-    color: black;
-    background-color: white;
-    font-size: 4rem;
-    display: inline;
-    line-height: 1;
+  .icon:hover i {
+    filter: brightness(70%) grayscale(100%); /* Apply combined filters when hovering over the icons */
   }
 
   .left {
     grid-column: 6 / 12;
   }
+   body {
+     background-color: #131316;
+     color: #ffffff;
+     /*font-family: 'UnifrakturMaguntia', cursive;*/
+
+     font-family: 'Poppins', sans-serif;
+     padding: 0;
+     margin: 0;
+   }
+   .custom-link {
+     text-decoration: none;
+   }
+
+   .hidden {
+     opacity: 0;
+     transition: all 1s;
+   }
+
+   .show {
+     opacity: 1;
+     filter: blur(0);
+
+   }
+   @media(prefers-reduced-motion ) {
+     .hidden {
+       transition: none;
+     }
+   }
+
+  .image-links-container {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+  }
+
+  .links-container {
+    display: flex;
+    flex-direction: column; /* Stack the links vertically */
+  }
+
+  .custom-link {
+    margin-bottom: 10px; /* Add some spacing between the links */
+    color: var(--sun-color, #ffc400);
+  }
+
+  .image-container {
+    margin-right: 10px; /* Add some spacing between the image and links */
+  }
+
+  .popup-section {
+    display: none; /* Hide the section by default */
+    position: fixed;
+    top: 25%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    color: var(--sun-color, #ffc400);
+    opacity: 1; /* Initial opacity */
+    transition: opacity 1s; /* Add a transition for the opacity property */
+  }
+
+  #last-updated {
+    position: fixed;
+    bottom: 10px;
+    left: 10px; /* Update the 'right' to 'left' for bottom left positioning */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s; /* Add a fade-in/out transition */
+  }
+
+  /*.education {*/
+  /*  !*font-family: 'Monoton', serif;*!*/
+  /*  font-family: 'UnifrakturMaguntia', serif;*/
+  /*  font-size: 38px;*/
+  /*  font-weight: 400;*/
+  /*}*/
+
+  /*.research {*/
+  /*  font-family: 'Monoton', serif;*/
+  /*  !*font-family: 'UnifrakturMaguntia', serif;*!*/
+  /*  font-size: 38px;*/
+  /*  font-weight: 400;*/
+  /*}*/
+
+  /*.intern {*/
+  /*  font-family: 'Kablammo', cursive;*/
+  /*}*/
+
+  /*.project {*/
+  /*  font-family: 'Roboto Mono', monospace;*/
+  /*}*/
