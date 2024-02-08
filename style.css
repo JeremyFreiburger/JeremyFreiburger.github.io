@@ -140,6 +140,12 @@ canvas {
     transition: opacity 0.3s; /* Add a fade-in/out transition */
   }
 
+  .popup-trigger {
+    cursor: pointer;
+    /*color: blue; !* Change the color as desired *!*/
+    /*text-decoration: underline; !* Add underline for a typical link look *!*/
+  }
+
   /*.education {*/
   /*  !*font-family: 'Monoton', serif;*!*/
   /*  font-family: 'UnifrakturMaguntia', serif;*/
